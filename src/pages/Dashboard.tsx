@@ -1,4 +1,3 @@
-
 import { CarItem, Navbar } from "../components";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { baseURL } from "../api/config";
@@ -24,24 +23,22 @@ export function Dashboard() {
       console.log("revalidar");
    };
 
-
-
    return (
       <>
          <Navbar />
-         <section className="w-screen min-h-screen bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
+         <section className="w-full min-h-screen bg-gray-50 dark:bg-gray-900 py-3 sm:py-5">
             <div className="px-4 mx-auto max-w-screen-2xl lg:px-12">
                <div className="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
                   <div className="flex flex-col px-4 py-3 space-y-3 lg:flex-row lg:items-center lg:justify-between lg:space-y-0 lg:space-x-4">
                      <div className="flex items-center flex-1 space-x-4">
                         <h5>
-                           <span className="text-gray-500">All Products:</span>
+                           <span className="text-gray-500">All Products: </span>
                            <span className="dark:text-white">
                               {data?.length}
                            </span>
                         </h5>
                         <h5>
-                           <span className="text-gray-500">Total stock:</span>
+                           <span className="text-gray-500">Total stock: </span>
                            <span className="dark:text-white">$88.4k</span>
                         </h5>
                      </div>
@@ -67,8 +64,9 @@ export function Dashboard() {
                         </Link>
                         <button
                            type="button"
+                           disabled
                            onClick={() => onRevalidateData()}
-                           className="flex items-center justify-center flex-shrink-0 px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                           className="disabled:bg-red-500 disabled:text-white flex items-center justify-center flex-shrink-0 px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                         >
                            <svg
                               className="w-4 h-4 mr-2"

@@ -2,8 +2,6 @@ import { create } from "zustand";
 
 type User = {
    name?: string;
-   // email: string;
-   // password: string;
 };
 
 type Status = "checking" | "not-authenticated" | "authenticated";

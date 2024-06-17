@@ -5,7 +5,6 @@ export const useCheckAuthStore = () => {
    const user = useAuthStore((state) => state.user);
    const status = useAuthStore((state) => state.status);
    const errorMessage = useAuthStore((state) => state.errorMessage);
-   // const dispatch = useDispatch();
    const setStatus = useAuthStore((state) => state.setStatus);
    const setUser = useAuthStore((state) => state.setUser);
    const startLogin = async ({
@@ -71,6 +70,5 @@ export const useCheckAuthStore = () => {
       checkAuthToken,
       startLogin,
       startLogout,
-      //   startRegister,
    };
 };
