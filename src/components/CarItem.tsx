@@ -1,5 +1,6 @@
 import { EditItem } from "./EditItem";
 import { RemoveItem } from "./RemoveItem";
+import { UpdateStock } from "./UpdateStock";
 
 export const CarItem = ({
    car,
@@ -47,9 +48,11 @@ export const CarItem = ({
             </span>
          </td>
          <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
                <div className="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
+               <UpdateStock id={car._id} amount={(car.stock)+1} />               
                {car.stock}
+               <UpdateStock id={car._id} amount={(car.stock)-1} less/>
             </div>
          </td>
          <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
