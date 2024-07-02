@@ -1,7 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Dashboard, EditPage, LoginPage, NewProduct } from "../pages";
 import { useEffect } from "react";
-// import { useAuthStore } from "../store/authStore";
 import { useCheckAuthStore } from "../hooks/useCheckAuthStore";
 
 export const AppRouter = () => {
@@ -10,10 +9,6 @@ export const AppRouter = () => {
       checkAuthToken();
    // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
-
-   // if (status === "checking") {
-   //    return <h3>Loading...</h3>;
-   // }
 
    return (
       <BrowserRouter>
