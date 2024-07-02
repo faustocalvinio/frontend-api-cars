@@ -8,5 +8,6 @@ export interface CarData {
     stock: number;
     image: string;
     sales: number;
+    lastUpdate:string;
     __v?: number;
  }

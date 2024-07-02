@@ -1,6 +1,8 @@
+import { CarStock } from "./CarStock";
 import { EditItem } from "./EditItem";
 import { RemoveItem } from "./RemoveItem";
-import { UpdateStock } from "./UpdateStock";
+import { TimeAgo } from "./TimeAgo";
+
 
 export const CarItem = ({
    car,
@@ -14,8 +16,14 @@ export const CarItem = ({
       stock: number;
       image: string;
       sales: number;
+      lastUpdate: string;
    };
 }) => {
+   
+   // useEffect(() => {
+     
+   // }, [car.lastUpdate])
+   
    return (
       <tr className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
          <td className="w-4 px-4 py-3">
@@ -49,10 +57,7 @@ export const CarItem = ({
          </td>
          <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
             <div className="flex items-center gap-4">
-               <div className="inline-block w-4 h-4 mr-2 bg-red-700 rounded-full"></div>
-               <UpdateStock id={car._id} amount={(car.stock)+1} />               
-               {car.stock}
-               <UpdateStock id={car._id} amount={(car.stock)-1} less/>
+               <CarStock id={car._id} stock={car.stock}/>               
             </div>
          </td>
          <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -69,9 +74,9 @@ export const CarItem = ({
                {car.sales}
             </div>
          </td>
-         <td className="px-4 py-2">${car.price}</td>
+         <td className="px-4 py-2 text-green-600">${car.price}</td>
          <td className="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-            Just now
+            <TimeAgo lastUpdate={car.lastUpdate}/>
          </td>
          <td className="px-4 py-2 flex  gap-2 items-center justify-center">
             <RemoveItem model={car.model} id={car._id} />
