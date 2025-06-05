@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# 🚘 Car Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React-based frontend for managing car data, connected to the [Backend API Cars](https://github.com/yourusername/backend-api-cars). This project allows users to perform CRUD operations on car entries with secure JWT-based authentication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧰 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚛️ React (Vite or Create React App)
+- 🎨 Tailwind CSS (or CSS Modules)
+- 🔐 JWT-based auth integration
+- 🔗 Axios for API requests
+- 🌍 Connected to Node.js + Express + MongoDB backend
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 📌 Features
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- 🔐 User login and JWT authentication
+- 🚗 View list of cars
+- ➕ Add new car
+- ✏️ Update car details
+- ❌ Delete car
+- 🎯 Form validation and error handling
+- 🌙 Responsive UI and clean design
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+- Backend API running ([Backend API Cars](https://github.com/yourusername/backend-api-cars))
+- Node.js ≥ 14.x
+- A modern browser
+
+### 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/car-management-frontend.git
+cd car-management-frontend
+npm install
